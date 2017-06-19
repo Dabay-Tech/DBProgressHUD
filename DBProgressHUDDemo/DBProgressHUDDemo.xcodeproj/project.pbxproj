@@ -16,10 +16,9 @@
 		86352D001EF3C4BB00C0EF6C /* DBProgressHUDDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86352CFF1EF3C4BB00C0EF6C /* DBProgressHUDDemoTests.m */; };
 		86352D0B1EF3C4BB00C0EF6C /* DBProgressHUDDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86352D0A1EF3C4BB00C0EF6C /* DBProgressHUDDemoUITests.m */; };
 		86352D1F1EF3C52200C0EF6C /* LoadingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86352D1A1EF3C52200C0EF6C /* LoadingImageView.m */; };
-		86352D201EF3C52200C0EF6C /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 86352D1C1EF3C52200C0EF6C /* MBProgressHUD+MJ.m */; };
+		86352D201EF3C52200C0EF6C /* MBProgressHUD+Dabay.m in Sources */ = {isa = PBXBuildFile; fileRef = 86352D1C1EF3C52200C0EF6C /* MBProgressHUD+Dabay.m */; };
 		86352D211EF3C52200C0EF6C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 86352D1E1EF3C52200C0EF6C /* MBProgressHUD.m */; };
 		86352D261EF3C8D500C0EF6C /* loading_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86352D251EF3C8D500C0EF6C /* loading_bg@2x.png */; };
-		86352D291EF3CA9300C0EF6C /* NullTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 86352D281EF3CA9300C0EF6C /* NullTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,13 +57,11 @@
 		86352D0C1EF3C4BB00C0EF6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86352D191EF3C52200C0EF6C /* LoadingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingImageView.h; sourceTree = "<group>"; };
 		86352D1A1EF3C52200C0EF6C /* LoadingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingImageView.m; sourceTree = "<group>"; };
-		86352D1B1EF3C52200C0EF6C /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
-		86352D1C1EF3C52200C0EF6C /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		86352D1B1EF3C52200C0EF6C /* MBProgressHUD+Dabay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Dabay.h"; sourceTree = "<group>"; };
+		86352D1C1EF3C52200C0EF6C /* MBProgressHUD+Dabay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Dabay.m"; sourceTree = "<group>"; };
 		86352D1D1EF3C52200C0EF6C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		86352D1E1EF3C52200C0EF6C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		86352D251EF3C8D500C0EF6C /* loading_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading_bg@2x.png"; sourceTree = "<group>"; };
-		86352D271EF3CA9300C0EF6C /* NullTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NullTool.h; sourceTree = "<group>"; };
-		86352D281EF3CA9300C0EF6C /* NullTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,13 +155,11 @@
 		86352D181EF3C52200C0EF6C /* DBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				86352D271EF3CA9300C0EF6C /* NullTool.h */,
-				86352D281EF3CA9300C0EF6C /* NullTool.m */,
 				86352D251EF3C8D500C0EF6C /* loading_bg@2x.png */,
 				86352D191EF3C52200C0EF6C /* LoadingImageView.h */,
 				86352D1A1EF3C52200C0EF6C /* LoadingImageView.m */,
-				86352D1B1EF3C52200C0EF6C /* MBProgressHUD+MJ.h */,
-				86352D1C1EF3C52200C0EF6C /* MBProgressHUD+MJ.m */,
+				86352D1B1EF3C52200C0EF6C /* MBProgressHUD+Dabay.h */,
+				86352D1C1EF3C52200C0EF6C /* MBProgressHUD+Dabay.m */,
 				86352D1D1EF3C52200C0EF6C /* MBProgressHUD.h */,
 				86352D1E1EF3C52200C0EF6C /* MBProgressHUD.m */,
 			);
@@ -310,9 +305,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				86352CED1EF3C4BB00C0EF6C /* ViewController.m in Sources */,
-				86352D291EF3CA9300C0EF6C /* NullTool.m in Sources */,
 				86352D211EF3C52200C0EF6C /* MBProgressHUD.m in Sources */,
-				86352D201EF3C52200C0EF6C /* MBProgressHUD+MJ.m in Sources */,
+				86352D201EF3C52200C0EF6C /* MBProgressHUD+Dabay.m in Sources */,
 				86352D1F1EF3C52200C0EF6C /* LoadingImageView.m in Sources */,
 				86352CEA1EF3C4BB00C0EF6C /* AppDelegate.m in Sources */,
 				86352CE71EF3C4BB00C0EF6C /* main.m in Sources */,
@@ -553,6 +547,7 @@
 				86352D111EF3C4BB00C0EF6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86352D121EF3C4BB00C0EF6C /* Build configuration list for PBXNativeTarget "DBProgressHUDDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -561,6 +556,7 @@
 				86352D141EF3C4BB00C0EF6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86352D151EF3C4BB00C0EF6C /* Build configuration list for PBXNativeTarget "DBProgressHUDDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -569,6 +565,7 @@
 				86352D171EF3C4BB00C0EF6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

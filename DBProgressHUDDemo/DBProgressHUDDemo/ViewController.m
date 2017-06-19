@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "MBProgressHUD+MJ.h"
+#import "MBProgressHUD+Dabay.h"
 
 @interface ViewController ()
 
@@ -19,7 +19,7 @@
     [super viewDidLoad];
     
     
-    [MBProgressHUD showLoading:@"加载中" toView:self.view];
+    [MBProgressHUD showLoading:@"努力加载中..." toView:self.view];
 }
 
 

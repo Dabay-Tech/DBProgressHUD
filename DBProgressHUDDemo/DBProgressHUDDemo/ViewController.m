@@ -20,6 +20,9 @@
     
     
     [MBProgressHUD showLoading:@"努力加载中..." toView:self.view];
+    
+    
+//    [MBProgressHUD db_showMultiLineMessage: @"正在加载中.......................................----------------"];
 }
 
 

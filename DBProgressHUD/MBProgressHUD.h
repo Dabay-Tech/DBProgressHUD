@@ -243,6 +243,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (assign, nonatomic) CGSize minSize UI_APPEARANCE_SELECTOR;
 
+@property (nonatomic, assign) BOOL sizeFlag;    //改变hud的大小
+
 /**
  * Force the HUD dimensions to be equal if possible.
  */

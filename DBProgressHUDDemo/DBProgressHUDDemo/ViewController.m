@@ -19,17 +19,17 @@
     [super viewDidLoad];
     
     
-//    [DBProgressHUD db_showLoading:@"加载中..." toView:self.view];
+    [DBProgressHUD db_showLoading:@"努力加载中" toView:self.view];
     
     
     
-    DBProgressHUD *hud=[DBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.mode=MBProgressHUDModeDeterminateHorizontalBar;
-    hud.progress=0.5;
-    hud.detailsLabel.textColor=[UIColor greenColor];
-    hud.detailsLabel.text=@"加载中...";
-    hud.label.text=@"123";
-    hud.label.textColor=[UIColor redColor];
+//    DBProgressHUD *hud=[DBProgressHUD showHUDAddedTo:self.view animated:YES];
+//    hud.mode=MBProgressHUDModeDeterminateHorizontalBar;
+//    hud.progress=0.5;
+//    hud.detailsLabel.textColor=[UIColor greenColor];
+//    hud.detailsLabel.text=@"加载中...";
+//    hud.label.text=@"123";
+//    hud.label.textColor=[UIColor redColor];
     
     
 //    [DBProgressHUD db_showMultiLineMessage: @"正在加载中.......................................----------------"];

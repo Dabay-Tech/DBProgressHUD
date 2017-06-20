@@ -184,6 +184,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (copy, nullable) MBProgressHUDCompletionBlock completionBlock;
 
 /*
+ * graceTime:show函数触发到显示HUD的时间段
  * Grace period is the time (in seconds) that the invoked method may be run without
  * showing the HUD. If the task finishes before the grace time runs out, the HUD will
  * not be shown at all.
@@ -243,7 +244,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (assign, nonatomic) CGSize minSize UI_APPEARANCE_SELECTOR;
 
-@property (nonatomic, assign) BOOL sizeFlag;    //改变hud的大小
+
 
 /**
  * Force the HUD dimensions to be equal if possible.

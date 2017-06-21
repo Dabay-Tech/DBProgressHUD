@@ -115,6 +115,7 @@
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:blockView animated:YES];
         hud.detailsLabel.text = text;
         hud.detailsLabel.font = [UIFont systemFontOfSize:15];
+        hud.contentColor=[UIColor whiteColor];
         
         // 设置图片
         hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"DBProgressHUD.bundle/%@", icon]]];
@@ -127,7 +128,7 @@
         hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
         
         // 1.5秒之后再消失
-        [hud hideAnimated:YES afterDelay:1.5];
+        [hud hideAnimated:YES afterDelay:2.0];
     });
 }
 

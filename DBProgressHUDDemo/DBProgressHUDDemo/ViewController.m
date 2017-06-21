@@ -19,9 +19,9 @@
     [super viewDidLoad];
     
     
-    [DBProgressHUD db_showLoading:@"努力加载中" toView:self.view];
+//    [DBProgressHUD db_showLoading:@"努力加载中" toView:self.view];
     
-//    [DBProgressHUD db_showSuccess:@"qignqi"];
+    [DBProgressHUD db_showError:@"服务暂不可用，请稍后重试"];
     
     
     

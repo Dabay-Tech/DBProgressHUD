@@ -117,7 +117,7 @@
         hud.detailsLabel.font = [UIFont systemFontOfSize:15];
         
         // 设置图片
-        hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"MBProgressHUD.bundle/%@", icon]]];
+        hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"DBProgressHUD.bundle/%@", icon]]];
         
         // 再设置模式
         hud.mode = MBProgressHUDModeCustomView;

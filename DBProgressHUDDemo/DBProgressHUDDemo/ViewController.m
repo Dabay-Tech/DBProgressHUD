@@ -21,6 +21,8 @@
     
     [DBProgressHUD db_showLoading:@"努力加载中" toView:self.view];
     
+//    [DBProgressHUD db_showSuccess:@"qignqi"];
+    
     
     
 //    DBProgressHUD *hud=[DBProgressHUD showHUDAddedTo:self.view animated:YES];

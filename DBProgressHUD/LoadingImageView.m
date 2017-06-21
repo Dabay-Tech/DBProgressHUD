@@ -32,7 +32,7 @@
     }
     
     LoadingImageView *loadingView=[[LoadingImageView alloc]init];
-    loadingView.image=[[UIImage imageWithContentsOfFile:[sourceBundle pathForResource:@"loading_bg@2x" ofType:@"png"]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    loadingView.image=[[UIImage imageWithContentsOfFile:[sourceBundle pathForResource:@"loading@2x" ofType:@"png"]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     loadingView.image = [loadingView.image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     loadingView->timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
     dispatch_source_set_timer(loadingView->timer, DISPATCH_TIME_NOW, 0.04 * NSEC_PER_SEC, 0 * NSEC_PER_SEC);

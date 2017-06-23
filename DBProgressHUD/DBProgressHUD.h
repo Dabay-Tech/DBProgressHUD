@@ -7,6 +7,7 @@
 //
 
 #import "MBProgressHUD.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 
 @interface DBProgressHUD : MBProgressHUD

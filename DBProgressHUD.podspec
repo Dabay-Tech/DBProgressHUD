@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "DBProgressHUD"
-  s.version      = "1.0.4"
+  s.version      = "1.0.5"
   s.summary      = "Dabay tech : DBProgressHUD is based on MBProgressHUD."
   s.homepage     = "https://github.com/Dabay-Tech/DBProgressHUD"
   s.license      = "MIT"
@@ -11,6 +11,7 @@ Pod::Spec.new do |s|
   s.source_files = "DBProgressHUD/**/*.{h,m}"
   s.resource     = 'DBProgressHUD/DBProgressHUD.bundle'
   s.frameworks   = "CoreGraphics",'QuartzCore',"UIKit"
+  s.dependency  "MBProgressHUD", "~> 1.0.0"
   s.requires_arc = true
 
 end

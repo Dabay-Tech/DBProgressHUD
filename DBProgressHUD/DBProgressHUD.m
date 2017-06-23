@@ -59,18 +59,18 @@
  @param message 提示信息
  @param view HUD要加载到的View
  */
-+ (void)db_showMessage:(NSString *)message toView:(UIView *)view {
-    __block UIView * blockView = view;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        if (blockView == nil) blockView = [[UIApplication sharedApplication].windows lastObject];
-        // 快速显示一个提示信息
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:blockView animated:YES];
-        hud.label.text = message;
-        // 隐藏时候从父控件中移除
-        hud.removeFromSuperViewOnHide = YES;
-        hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
-    });
-    
++ (DBProgressHUD *)db_showMessage:(NSString *)message toView:(UIView *)view {
+    if (!view) {
+        view = [[UIApplication sharedApplication].windows lastObject];
+    }
+    // 快速显示一个提示信息
+    DBProgressHUD *hud = [DBProgressHUD showHUDAddedTo:view animated:YES];
+    hud.label.text = message;
+    // 隐藏时候从父控件中移除
+    hud.removeFromSuperViewOnHide = YES;
+    hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
+
+    return hud;
 }
 
 
@@ -112,7 +112,7 @@
         if (blockView == nil) blockView = [[UIApplication sharedApplication].windows lastObject];
         
         // 快速显示一个提示信息
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:blockView animated:YES];
+        DBProgressHUD *hud = [DBProgressHUD showHUDAddedTo:blockView animated:YES];
         hud.detailsLabel.text = text;
         hud.detailsLabel.font = [UIFont systemFontOfSize:15];
         hud.contentColor=[UIColor whiteColor];
@@ -127,7 +127,7 @@
         hud.removeFromSuperViewOnHide = YES;
         hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
         
-        // 1.5秒之后再消失
+        // 2.0秒之后再消失
         [hud hideAnimated:YES afterDelay:2.0];
     });
 }
@@ -148,7 +148,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         if (blockView == nil) blockView = [[UIApplication sharedApplication].windows lastObject];
         // 快速显示一个提示信息
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:blockView animated:YES];
+        DBProgressHUD *hud = [DBProgressHUD showHUDAddedTo:blockView animated:YES];
         hud.detailsLabel.text = success;
         // 设置图片
         hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"MBProgressHUD.bundle/%@", @"success.png"]]];
@@ -179,7 +179,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         if (blockView == nil) blockView = [[UIApplication sharedApplication].windows lastObject];
         // 快速显示一个提示信息
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:blockView animated:YES];
+        DBProgressHUD *hud = [DBProgressHUD showHUDAddedTo:blockView animated:YES];
         hud.detailsLabel.text = error;
         // 设置图片
         hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"MBProgressHUD.bundle/%@", @"error.png"]]];
@@ -208,7 +208,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         if (blockView == nil) blockView = [[UIApplication sharedApplication].windows lastObject];
         // 快速显示一个提示信息
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:blockView animated:YES];
+        DBProgressHUD *hud = [DBProgressHUD showHUDAddedTo:blockView animated:YES];
         hud.detailsLabel.text = message;
         //HUD的背景颜色
         hud.bezelView.color= [UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.645362367021276];
@@ -277,9 +277,9 @@
  
  @param message 提示信息
  */
-+ (void)db_showMessage:(NSString *)message
++ (DBProgressHUD *)db_showMessage:(NSString *)message
 {
-    [self db_showMessage:message toView:nil];
+     return [self db_showMessage:message toView:nil];
 }
 
 

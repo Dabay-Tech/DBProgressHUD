@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E980E9D2535002210A9A80C /* libPods-DBProgressHUDDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDE343CD0CD6CF17BEFF26D /* libPods-DBProgressHUDDemo.a */; };
 		86352CE71EF3C4BB00C0EF6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86352CE61EF3C4BB00C0EF6C /* main.m */; };
 		86352CEA1EF3C4BB00C0EF6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86352CE91EF3C4BB00C0EF6C /* AppDelegate.m */; };
 		86352CED1EF3C4BB00C0EF6C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86352CEC1EF3C4BB00C0EF6C /* ViewController.m */; };
@@ -16,7 +17,6 @@
 		86352D001EF3C4BB00C0EF6C /* DBProgressHUDDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86352CFF1EF3C4BB00C0EF6C /* DBProgressHUDDemoTests.m */; };
 		86352D0B1EF3C4BB00C0EF6C /* DBProgressHUDDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86352D0A1EF3C4BB00C0EF6C /* DBProgressHUDDemoUITests.m */; };
 		86352D1F1EF3C52200C0EF6C /* LoadingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86352D1A1EF3C52200C0EF6C /* LoadingImageView.m */; };
-		86352D211EF3C52200C0EF6C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 86352D1E1EF3C52200C0EF6C /* MBProgressHUD.m */; };
 		86D264AF1EF8F02100092B1D /* DBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D264AE1EF8F02100092B1D /* DBProgressHUD.m */; };
 		86D2656E1EF909B500092B1D /* DBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 86D2656D1EF909B500092B1D /* DBProgressHUD.bundle */; };
 /* End PBXBuildFile section */
@@ -39,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A1742500D8FB8860DFFFAA6 /* Pods-DBProgressHUDDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DBProgressHUDDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DBProgressHUDDemo/Pods-DBProgressHUDDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		86352CE21EF3C4BB00C0EF6C /* DBProgressHUDDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DBProgressHUDDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86352CE61EF3C4BB00C0EF6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		86352CE81EF3C4BB00C0EF6C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,11 +58,11 @@
 		86352D0C1EF3C4BB00C0EF6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86352D191EF3C52200C0EF6C /* LoadingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingImageView.h; sourceTree = "<group>"; };
 		86352D1A1EF3C52200C0EF6C /* LoadingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingImageView.m; sourceTree = "<group>"; };
-		86352D1D1EF3C52200C0EF6C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		86352D1E1EF3C52200C0EF6C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		86D264AD1EF8F02100092B1D /* DBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBProgressHUD.h; sourceTree = "<group>"; };
 		86D264AE1EF8F02100092B1D /* DBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBProgressHUD.m; sourceTree = "<group>"; };
 		86D2656D1EF909B500092B1D /* DBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DBProgressHUD.bundle; sourceTree = "<group>"; };
+		B96B8CE569713410E24B9B77 /* Pods-DBProgressHUDDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DBProgressHUDDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DBProgressHUDDemo/Pods-DBProgressHUDDemo.release.xcconfig"; sourceTree = "<group>"; };
+		BDDE343CD0CD6CF17BEFF26D /* libPods-DBProgressHUDDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DBProgressHUDDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E980E9D2535002210A9A80C /* libPods-DBProgressHUDDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7DDCDB654639727EE59C43EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDDE343CD0CD6CF17BEFF26D /* libPods-DBProgressHUDDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		86352CD91EF3C4BB00C0EF6C = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +106,8 @@
 				86352CFE1EF3C4BB00C0EF6C /* DBProgressHUDDemoTests */,
 				86352D091EF3C4BB00C0EF6C /* DBProgressHUDDemoUITests */,
 				86352CE31EF3C4BB00C0EF6C /* Products */,
+				D55380708782EC2A5A6C065A /* Pods */,
+				7DDCDB654639727EE59C43EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,13 +170,20 @@
 				86D2656D1EF909B500092B1D /* DBProgressHUD.bundle */,
 				86352D191EF3C52200C0EF6C /* LoadingImageView.h */,
 				86352D1A1EF3C52200C0EF6C /* LoadingImageView.m */,
-				86352D1D1EF3C52200C0EF6C /* MBProgressHUD.h */,
-				86352D1E1EF3C52200C0EF6C /* MBProgressHUD.m */,
 				86D264AD1EF8F02100092B1D /* DBProgressHUD.h */,
 				86D264AE1EF8F02100092B1D /* DBProgressHUD.m */,
 			);
 			name = DBProgressHUD;
 			path = ../../DBProgressHUD;
+			sourceTree = "<group>";
+		};
+		D55380708782EC2A5A6C065A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A1742500D8FB8860DFFFAA6 /* Pods-DBProgressHUDDemo.debug.xcconfig */,
+				B96B8CE569713410E24B9B77 /* Pods-DBProgressHUDDemo.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86352D0F1EF3C4BB00C0EF6C /* Build configuration list for PBXNativeTarget "DBProgressHUDDemo" */;
 			buildPhases = (
+				6A8FD00BE35C6C4FE869D863 /* [CP] Check Pods Manifest.lock */,
 				86352CDE1EF3C4BB00C0EF6C /* Sources */,
 				86352CDF1EF3C4BB00C0EF6C /* Frameworks */,
 				86352CE01EF3C4BB00C0EF6C /* Resources */,
+				7E66630DC08564A1FB9872B4 /* [CP] Embed Pods Frameworks */,
+				100418E5B6F2ECA896F8937A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -299,13 +321,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		100418E5B6F2ECA896F8937A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DBProgressHUDDemo/Pods-DBProgressHUDDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A8FD00BE35C6C4FE869D863 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7E66630DC08564A1FB9872B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DBProgressHUDDemo/Pods-DBProgressHUDDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		86352CDE1EF3C4BB00C0EF6C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				86352CED1EF3C4BB00C0EF6C /* ViewController.m in Sources */,
-				86352D211EF3C52200C0EF6C /* MBProgressHUD.m in Sources */,
 				86352D1F1EF3C52200C0EF6C /* LoadingImageView.m in Sources */,
 				86D264AF1EF8F02100092B1D /* DBProgressHUD.m in Sources */,
 				86352CEA1EF3C4BB00C0EF6C /* AppDelegate.m in Sources */,
@@ -456,6 +525,7 @@
 		};
 		86352D101EF3C4BB00C0EF6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A1742500D8FB8860DFFFAA6 /* Pods-DBProgressHUDDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W58KGB664J;
@@ -468,6 +538,7 @@
 		};
 		86352D111EF3C4BB00C0EF6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B96B8CE569713410E24B9B77 /* Pods-DBProgressHUDDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W58KGB664J;

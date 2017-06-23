@@ -48,7 +48,7 @@
  @param message 提示信息
  @param view HUD要加载到的View
  */
-+ (void)db_showMessage:(NSString *)message toView:(UIView *)view;
++ (DBProgressHUD *)db_showMessage:(NSString *)message toView:(UIView *)view;
 
 
 /**
@@ -72,7 +72,7 @@
 
  @param message 提示信息
  */
-+ (void)db_showMessage:(NSString *)message;
++ (DBProgressHUD *)db_showMessage:(NSString *)message;
 
 
 /**

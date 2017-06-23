@@ -8,7 +8,7 @@
 
 #import "DBProgressHUD.h"
 #import "LoadingImageView.h"
-#import <MBProgressHUD.h>
+#import "MBProgressHUD.h"
 
 @implementation DBProgressHUD
 

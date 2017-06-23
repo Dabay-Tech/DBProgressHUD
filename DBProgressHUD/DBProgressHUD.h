@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Dabay. All rights reserved.
 //
 
-#import "MBProgressHUD.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 
 

@@ -78,6 +78,11 @@
 
 
 /**
+ 隐藏带有动画的加载HUD
+ */
+-(void)db_dismissLoadingMessage;
+
+/**
  隐藏HUD
 
  @param view HUD所在的View

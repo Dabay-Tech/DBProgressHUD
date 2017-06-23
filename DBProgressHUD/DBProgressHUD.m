@@ -286,6 +286,16 @@
 
 
 /**
+ 隐藏
+ */
+-(void)db_dismissLoadingMessage{
+
+    self.hidden=YES;
+}
+
+
+
+/**
  隐藏HUD
  
  @param view HUD所在的View

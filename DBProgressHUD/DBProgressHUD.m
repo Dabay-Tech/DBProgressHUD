@@ -24,9 +24,8 @@
  
  @param message 加载的提示信息
  @param view HUD要加载到的View
- @return 返回HUD
  */
-+ (DBProgressHUD *)db_showLoading:(NSString *)message toView:(UIView *)view{
++ (void)db_showLoading:(NSString *)message toView:(UIView *)view{
     
     
     __block UIView * blockView = view;
@@ -34,8 +33,6 @@
     hud.removeFromSuperViewOnHide = YES;
     [view addSubview:hud];
     [hud showAnimated:YES];
-    
-    NSLog(@"当前的线程%@",[NSThread currentThread]);
     
     dispatch_async(dispatch_get_main_queue(), ^{
         
@@ -60,16 +57,7 @@
         // 隐藏时候从父控件中移除
         hud.removeFromSuperViewOnHide = YES;
         hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
-        NSLog(@"block中的hud的地址：——%@",hud);
-        NSLog(@"当前的线程%@",[NSThread currentThread]);
-        
     });
-    NSLog(@"db_showLoading---hud=%@",hud);
-    
-    
-    
-    return hud;
-    
 }
 
 
@@ -186,7 +174,7 @@
         hud.detailsLabel.font = [UIFont systemFontOfSize:16]; //Johnkui - added
         hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
         // 1秒之后再消失
-        [hud hideAnimated:YES afterDelay:1.5];
+        [hud hideAnimated:YES afterDelay:2.0];
     });
 }
 
@@ -216,8 +204,8 @@
         hud.removeFromSuperViewOnHide = YES;
         hud.detailsLabel.font = [UIFont systemFontOfSize:16]; //Johnkui - added
         hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
-        // 1秒之后再消失
-        [hud hideAnimated:YES afterDelay:1.5];
+        // 2秒之后再消失
+        [hud hideAnimated:YES afterDelay:2.0];
     });
 }
 

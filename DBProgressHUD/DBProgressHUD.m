@@ -23,30 +23,51 @@
  @param view HUD要加载到的View
  @return 返回HUD
  */
-+ (DBProgressHUD *)db_showLoading:(NSString *)message toView:(UIView *)view {
-    if (!view) {
-        view = [[UIApplication sharedApplication].windows lastObject];
-    }
-    DBProgressHUD *hud = [DBProgressHUD showHUDAddedTo:view animated:YES];
++ (DBProgressHUD *)db_showLoading:(NSString *)message toView:(UIView *)view{
+    
+    
+    __block UIView * blockView = view;
+    static DBProgressHUD * hud ;
     hud.removeFromSuperViewOnHide = YES;
-    hud.mode = MBProgressHUDModeCustomView;
-    hud.animationType =MBProgressHUDAnimationFade;
-    hud.backgroundColor = [UIColor clearColor];
-    hud.bezelView.color = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
+    [view addSubview:hud];
+    [hud showAnimated:YES];
     
-    //设置提示
-    hud.detailsLabel.text = message;
-    hud.detailsLabel.font = [UIFont systemFontOfSize:13];
+    NSLog(@"当前的线程%@",[NSThread currentThread]);
     
-    //这里不要只是这是detailsLabel的textColor，因为MBProgressHUD内部会设置label/detailsLabel的颜色为contentColor
-    hud.contentColor = [UIColor whiteColor];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        if (blockView == nil) blockView = [[UIApplication sharedApplication].windows lastObject];
+        
+        // 快速显示一个提示信息
+        DBProgressHUD *hudTemp = [DBProgressHUD showHUDAddedTo:blockView animated:YES];
+        hud = hudTemp;
+        hud.detailsLabel.text = message;
+        hud.detailsLabel.font = [UIFont systemFontOfSize:13];
+        //这里不要只是这是detailsLabel的textColor，因为MBProgressHUD内部会设置label/detailsLabel的颜色为contentColor
+        hud.contentColor = [UIColor whiteColor];
+        
+        // 设置图片
+        //添加动态加载logo
+        LoadingImageView * loadImageView = [LoadingImageView loadImageView];
+        hud.customView = loadImageView;
+        
+        // 再设置模式
+        hud.mode = MBProgressHUDModeCustomView;
+        
+        // 隐藏时候从父控件中移除
+        hud.removeFromSuperViewOnHide = YES;
+        hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
+        NSLog(@"block中的hud的地址：——%@",hud);
+        NSLog(@"当前的线程%@",[NSThread currentThread]);
+        
+    });
+    NSLog(@"db_showLoading---hud=%@",hud);
     
-    //添加动态加载logo
-    LoadingImageView * loadImageView = [LoadingImageView loadImageView];
-    hud.customView = loadImageView;
+    
     
     return hud;
 }
+
 
 
 
@@ -57,7 +78,7 @@
 
 /**
  显示提示信息（单行）
-
+ 
  @param message 提示信息
  @param view HUD要加载到的View
  */
@@ -71,14 +92,14 @@
     // 隐藏时候从父控件中移除
     hud.removeFromSuperViewOnHide = YES;
     hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
-
+    
     return hud;
 }
 
 
 /**
  显示错误信息（单行）
-
+ 
  @param error 错误信息
  @param view HUD要加载到的View
  */
@@ -89,7 +110,7 @@
 
 /**
  显示成功信息（单行）
-
+ 
  @param success 成功信息
  @param view HUD要加载到的View
  */
@@ -140,7 +161,7 @@
 
 /**
  显示多行的成功信息。成功信息很多时，可以进行多行显示。（多行）
-
+ 
  @param success 成功信息
  @param view HUD要加载到的View
  */
@@ -170,7 +191,7 @@
 
 /**
  显示多行的错误信息。错误信息很多时，可以进行多行显示。（多行）
-
+ 
  @param error 错误信息
  @param view HUD要加载到的View
  */
@@ -281,7 +302,7 @@
  */
 + (DBProgressHUD *)db_showMessage:(NSString *)message
 {
-     return [self db_showMessage:message toView:nil];
+    return [self db_showMessage:message toView:nil];
 }
 
 
@@ -289,7 +310,7 @@
  隐藏
  */
 -(void)db_dismissLoadingMessage{
-
+    
     self.hidden=YES;
 }
 

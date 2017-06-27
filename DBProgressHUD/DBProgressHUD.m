@@ -11,6 +11,9 @@
 
 
 
+
+
+
 @implementation DBProgressHUD
 
 
@@ -27,7 +30,7 @@
     
     
     __block UIView * blockView = view;
-    static DBProgressHUD * hud ;
+    __block DBProgressHUD * hud ;
     hud.removeFromSuperViewOnHide = YES;
     [view addSubview:hud];
     [hud showAnimated:YES];
@@ -66,6 +69,7 @@
     
     
     return hud;
+    
 }
 
 
@@ -307,11 +311,15 @@
 
 
 /**
- 隐藏
+ 隐藏加载中的LoadingView
  */
--(void)db_dismissLoadingMessage{
++(void)db_dismissLoadingMessage{
     
-    self.hidden=YES;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIView * blockView =nil;
+        if (blockView == nil) blockView = [[UIApplication sharedApplication].windows lastObject];
+        [self hideHUDForView:blockView animated:YES];
+    });
 }
 
 
@@ -324,7 +332,9 @@
 + (void)db_hideHUDForView:(UIView *)view
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self hideHUDForView:view animated:YES];
+        UIView * hudView =view;
+        if (hudView == nil) hudView = [[UIApplication sharedApplication].windows lastObject];
+        [self hideHUDForView:hudView animated:YES];
     });
 }
 
@@ -344,7 +354,10 @@
  */
 + (void)db_hideHUDAnimated:(BOOL)animated
 {
-    [self db_hideHUDAnimated:animated];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIView * hudView = [[UIApplication sharedApplication].windows lastObject];
+        [self hideHUDForView:hudView animated:animated];
+    });
 }
 
 

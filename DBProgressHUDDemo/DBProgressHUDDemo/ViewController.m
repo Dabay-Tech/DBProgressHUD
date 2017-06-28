@@ -25,12 +25,14 @@
 //    [DBProgressHUD db_showSuccess:@"请求成功"];
     
 
-    DBProgressHUD *hud=[DBProgressHUD db_showLoading:@"加载中..." toView:self.view];
+    [DBProgressHUD db_showLoading:@"Loading......" toView:nil];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(15 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        [hud db_dismissLoadingMessage];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [DBProgressHUD db_hideHUDAnimated:NO];
     });
+    
+    
     
 
     

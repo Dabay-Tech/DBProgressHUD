@@ -16,7 +16,7 @@
 		86352CF51EF3C4BB00C0EF6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86352CF31EF3C4BB00C0EF6C /* LaunchScreen.storyboard */; };
 		86352D001EF3C4BB00C0EF6C /* DBProgressHUDDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86352CFF1EF3C4BB00C0EF6C /* DBProgressHUDDemoTests.m */; };
 		86352D0B1EF3C4BB00C0EF6C /* DBProgressHUDDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86352D0A1EF3C4BB00C0EF6C /* DBProgressHUDDemoUITests.m */; };
-		86352D1F1EF3C52200C0EF6C /* LoadingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86352D1A1EF3C52200C0EF6C /* LoadingImageView.m */; };
+		86352D1F1EF3C52200C0EF6C /* DBLoadingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86352D1A1EF3C52200C0EF6C /* DBLoadingImageView.m */; };
 		86D264AF1EF8F02100092B1D /* DBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D264AE1EF8F02100092B1D /* DBProgressHUD.m */; };
 		86D2656E1EF909B500092B1D /* DBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 86D2656D1EF909B500092B1D /* DBProgressHUD.bundle */; };
 /* End PBXBuildFile section */
@@ -56,8 +56,8 @@
 		86352D061EF3C4BB00C0EF6C /* DBProgressHUDDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DBProgressHUDDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86352D0A1EF3C4BB00C0EF6C /* DBProgressHUDDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBProgressHUDDemoUITests.m; sourceTree = "<group>"; };
 		86352D0C1EF3C4BB00C0EF6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86352D191EF3C52200C0EF6C /* LoadingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingImageView.h; sourceTree = "<group>"; };
-		86352D1A1EF3C52200C0EF6C /* LoadingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingImageView.m; sourceTree = "<group>"; };
+		86352D191EF3C52200C0EF6C /* DBLoadingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBLoadingImageView.h; sourceTree = "<group>"; };
+		86352D1A1EF3C52200C0EF6C /* DBLoadingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBLoadingImageView.m; sourceTree = "<group>"; };
 		86D264AD1EF8F02100092B1D /* DBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBProgressHUD.h; sourceTree = "<group>"; };
 		86D264AE1EF8F02100092B1D /* DBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBProgressHUD.m; sourceTree = "<group>"; };
 		86D2656D1EF909B500092B1D /* DBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -168,8 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				86D2656D1EF909B500092B1D /* DBProgressHUD.bundle */,
-				86352D191EF3C52200C0EF6C /* LoadingImageView.h */,
-				86352D1A1EF3C52200C0EF6C /* LoadingImageView.m */,
+				86352D191EF3C52200C0EF6C /* DBLoadingImageView.h */,
+				86352D1A1EF3C52200C0EF6C /* DBLoadingImageView.m */,
 				86D264AD1EF8F02100092B1D /* DBProgressHUD.h */,
 				86D264AE1EF8F02100092B1D /* DBProgressHUD.m */,
 			);
@@ -375,7 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86352CED1EF3C4BB00C0EF6C /* ViewController.m in Sources */,
-				86352D1F1EF3C52200C0EF6C /* LoadingImageView.m in Sources */,
+				86352D1F1EF3C52200C0EF6C /* DBLoadingImageView.m in Sources */,
 				86D264AF1EF8F02100092B1D /* DBProgressHUD.m in Sources */,
 				86352CEA1EF3C4BB00C0EF6C /* AppDelegate.m in Sources */,
 				86352CE71EF3C4BB00C0EF6C /* main.m in Sources */,

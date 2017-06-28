@@ -25,10 +25,19 @@
 //    [DBProgressHUD db_showSuccess:@"请求成功"];
     
 
-    [DBProgressHUD db_showLoading:@"Loading......" toView:nil];
+//    [DBProgressHUD db_showLoading:@"加载中" toView:nil];
+    
+//    [DBProgressHUD db_showMessage:@"Dabay-Tech"];
+    
+//    [DBProgressHUD db_showError:@"服务暂不可用，请稍后重试"];
     
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//    [DBProgressHUD db_showError:@"服务暂不可用，请稍后重试。服务暂不可用，请稍后重试" toView:nil];
+    
+    [DBProgressHUD db_showSuccess:@"大白科技-DBProgressHUD" toView:nil];
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [DBProgressHUD db_hideHUDAnimated:NO];
     });
     

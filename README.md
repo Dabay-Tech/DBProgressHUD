@@ -1,7 +1,5 @@
 # DBProgressHUD
 
-DBProgressHUD继承自MBProgressHUD，是在MBProgressHUD基础上进行了部分功能的扩充。目前还处于初级阶段，后续还会增加更多好用的功能。
-
 DBProgressHUD inherited from MBProgressHUD, is based on the MBProgressHUD part of the expansion of the function. Is still in the initial stage, follow-up will add more useful features.
 
 ## Requirements

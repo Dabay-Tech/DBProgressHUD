@@ -230,7 +230,7 @@
         hud.detailsLabel.text = message;
         hud.contentColor = [UIColor whiteColor];
         //HUD的背景颜色
-        hud.bezelView.color= [UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.645362367021276];
+        hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
         // YES代表需要蒙版效果
         hud.detailsLabel.font = [UIFont systemFontOfSize:14]; //Johnkui - added
     });

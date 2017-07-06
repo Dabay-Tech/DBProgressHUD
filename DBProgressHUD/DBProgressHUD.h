@@ -25,6 +25,13 @@
  */
 + (void)db_showLoading:(NSString *)message toView:(UIView *)view;
 
+/**
+ 显示数据加载中的转圈的效果，并显示相应的提示信息(无需指定view，默认使用当前显示的控制器的view)
+ 
+ @param message 加载时的提示信息
+ */
++ (void)db_showLoading:(NSString *)message;
+
 
 
 

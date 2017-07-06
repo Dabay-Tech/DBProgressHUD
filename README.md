@@ -34,13 +34,17 @@ Alternatively you can directly add the `DBProgressHUD.h` and `DBProgressHUD.m` s
 
 ## Usage
 
-
-
-
-
-
-
-
+```objective-c
+[DBProgressHUD db_showLoading:@"DBProgressHUD-努力加载中" toView:self.view];
+[DBProgressHUD db_showLoading:@"DBProgressHUD-加载中" toView:nil];
+[DBProgressHUD db_showMessage:@"DBProgressHUD-showMessage"];
+[DBProgressHUD db_showSuccess:@"DBProgressHUD-showSuccess" toView:nil];
+[DBProgressHUD db_showSuccess:@"DBProgressHUD-请求成功"];
+[DBProgressHUD db_showError:@"服务暂不可用，请稍后重试"];
+dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    [DBProgressHUD db_hideHUDAnimated:NO];
+});
+```
 
 ## License
 

@@ -19,20 +19,20 @@
     [super viewDidLoad];
     
     
-//    [DBProgressHUD db_showLoading:@"努力加载中" toView:self.view];
+//    [DBProgressHUD db_showLoading:@"  加载中...   " toView:self.view];
     
 //    [DBProgressHUD db_showError:@"服务暂不可用，请稍后重试"];
-//    [DBProgressHUD db_showSuccess:@"请求成功"];
+    [DBProgressHUD db_showSuccess:@" 请求成功    "];
     
 
-//    [DBProgressHUD db_showLoading:@"加载中" toView:nil];
+//    [DBProgressHUD db_showLoading:@"  加载中...   " toView:nil];
     
 //    [DBProgressHUD db_showMessage:@"Dabay-Tech"];
     
 //    [DBProgressHUD db_showError:@"服务暂不可用，请稍后重试"];
     
     
-    [DBProgressHUD db_showMultiLineMessage:@"服务暂不可用，请稍后\n重试。服务暂不可用，请稍后重试" toView:nil];
+//    [DBProgressHUD db_showMultiLineMessage:@"服务暂不可用，请稍后\n重试。服务暂不可用，请稍后重试" toView:nil];
     
 //    [DBProgressHUD db_showSuccess:@"大白科技-DBProgressHUD" toView:nil];
     

@@ -107,7 +107,7 @@
  @param view HUD要加载到的View
  */
 + (void)db_showError:(NSString *)error toView:(UIView *)view{
-    [self db_show:error icon:@"error.png" view:view];
+    [self db_show:error icon:@"icon_fail.png" view:view];
 }
 
 
@@ -119,7 +119,7 @@
  */
 + (void)db_showSuccess:(NSString *)success toView:(UIView *)view
 {
-    [self db_show:success icon:@"success.png" view:view];
+    [self db_show:success icon:@"icon_success.png" view:view];
 }
 
 

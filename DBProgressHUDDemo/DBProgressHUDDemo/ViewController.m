@@ -19,7 +19,7 @@
     [super viewDidLoad];
     
     
-    self.view.backgroundColor = [UIColor lightGrayColor];
+//    self.view.backgroundColor = [UIColor lightGrayColor];
 //    [DBProgressHUD db_showLoading:@"  加载中...   " toView:self.view];
     
 //    [DBProgressHUD db_showError:@"服务暂不可用，请稍后重试"];

@@ -152,7 +152,7 @@
         // 隐藏时候从父控件中移除
         hud.removeFromSuperViewOnHide = YES;
 //        hud.bezelView.color= [UIColor whiteColor];
-        hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.445362367021276];
+        hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
         
         // 3.0秒之后再消失
         [hud hideAnimated:YES afterDelay:3.0];

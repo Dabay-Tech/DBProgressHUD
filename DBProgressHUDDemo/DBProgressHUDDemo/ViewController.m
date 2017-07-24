@@ -25,6 +25,8 @@
 //    [DBProgressHUD db_showError:@"服务暂不可用，请稍后重试"];
     [DBProgressHUD db_showSuccess:@"添加参保人成功"];
     
+//    [DBProgressHUD db_showError:@"服务暂不可用，请稍后重试"];
+    
 
 //    [DBProgressHUD db_showLoading:@"  加载中...   " toView:nil];
     

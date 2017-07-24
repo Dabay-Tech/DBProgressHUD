@@ -96,6 +96,8 @@
         // 隐藏时候从父控件中移除
         hud.removeFromSuperViewOnHide = YES;
         hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
+        
+        [self db_startAnimationWithView:hud];
     });
 }
 
@@ -155,6 +157,7 @@
         hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
         
         // 3.0秒之后再消失
+        [self db_startAnimationWithView:hud];
         [hud hideAnimated:YES afterDelay:3.0];
     });
 }
@@ -364,6 +367,27 @@
 }
 
 
+/** start animation */
++(void)db_startAnimationWithView:(UIView *)view{
+
+    CGRect viewFrame = view.frame;
+    viewFrame.origin.y -= 500;
+    view.frame = viewFrame;
+    viewFrame.origin.y+=500;
+    
+    //beginAnimations表示此后的代码要"参与到"动画中
+    [UIView beginAnimations:nil context:nil];
+    
+    //设置动画时长
+    [UIView setAnimationDuration:0.3];
+    
+    //修改按钮的frame
+    view.frame = viewFrame;
+    
+    //commitAnimations,将beginAnimation之后的所有动画提交并生成动画
+    [UIView commitAnimations];
+
+}
 
 
 @end

@@ -1,8 +1,9 @@
 # DBProgressHUD
 
-![License MIT](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)
 ![Pod version](https://img.shields.io/cocoapods/v/DBProgressHUD.svg?style=flat)
 [![Platform info](https://img.shields.io/cocoapods/p/DBProgressHUD.svg?style=flat)](http://cocoadocs.org/docsets/DBProgressHUD)
+![License MIT](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)
+
 
 
 DBProgressHUD inherited from MBProgressHUD, is based on the MBProgressHUD part of the expansion of the function. Is still in the initial stage, follow-up will add more useful features.

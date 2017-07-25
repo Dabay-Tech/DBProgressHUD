@@ -41,6 +41,7 @@ Alternatively you can directly add the `DBProgressHUD.h` and `DBProgressHUD.m` s
 ## Usage
 
 ```objective-c
+[DBProgressHUD db_showTips:@"大白科技-DBProgressHUD"];
 [DBProgressHUD db_showLoading:@"DBProgressHUD-努力加载中" toView:self.view];
 [DBProgressHUD db_showLoading:@"DBProgressHUD-加载中" toView:nil];
 [DBProgressHUD db_showMessage:@"DBProgressHUD-showMessage"];

@@ -22,7 +22,11 @@ DBProgressHUD是在开源框架MBProgressHUD（version 1.0.0）的基础上进�
 
 `本项目中新增的方法都是DBProgressHUD的类方法且方法名都是以db_开头。`
 
+在只显示纯文本的提示的时候，推荐使用：（可以进行多行显示，默认3秒后自动消失）
 
+```objective-c
+[DBProgressHUD db_showTips:@"大白科技-DBProgressHUD"];
+```
 
 在进行耗时操作需要给用户一些提示时，推荐使用：
 

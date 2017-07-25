@@ -17,6 +17,43 @@
 @implementation DBProgressHUD
 
 
+
+/**
+ 显示纯文本形式的提示
+ 
+ @param tips 提示的内容
+ */
++(void)db_showTips:(NSString *)tips{
+
+    __block UIView * blockView = nil;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        if (blockView == nil) blockView = [[UIApplication sharedApplication].windows lastObject];
+        
+        // 快速显示一个提示信息
+        DBProgressHUD *hud = [DBProgressHUD showHUDAddedTo:blockView animated:YES];
+        hud.detailsLabel.text = tips;
+        hud.detailsLabel.font = [UIFont systemFontOfSize:15];
+        hud.contentColor=[UIColor whiteColor];
+        
+        // 设置图片
+        hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@""]];
+        
+        // 再设置模式
+        hud.mode = MBProgressHUDModeCustomView;
+        
+        // 隐藏时候从父控件中移除
+        hud.removeFromSuperViewOnHide = YES;
+        hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
+        
+        // 3.0秒之后再消失
+
+        [hud hideAnimated:YES afterDelay:3.0];
+    });
+
+}
+
+
 #pragma mark - 显示带有旋转动画的加载中的HUD
 
 /**

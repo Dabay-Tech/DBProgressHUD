@@ -18,6 +18,14 @@
 
 
 /**
+ 显示纯文本形式的提示
+
+ @param tips 提示的内容
+ */
++(void)db_showTips:(NSString *)tips;
+
+
+/**
  显示数据加载中的转圈的效果，并显示相应的提示信息
  
  @param message 加载时的提示信息

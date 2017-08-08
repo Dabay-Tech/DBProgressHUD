@@ -18,8 +18,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    UIVisualEffectView *BlurView = [[UIVisualEffectView alloc] initWithEffect:blur];
+    BlurView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    BlurView.alpha = 0.5;
+    [self.view addSubview:BlurView];
+    [self.view sendSubviewToBack:BlurView];
+
     
-//    self.view.backgroundColor = [UIColor lightGrayColor];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
     
 //    [DBProgressHUD db_showLoading:@"  加载中...   " toView:self.view];
     

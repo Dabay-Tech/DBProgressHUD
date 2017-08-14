@@ -48,7 +48,7 @@
         
         // 3.0秒之后再消失
 
-        [hud hideAnimated:YES afterDelay:3.0];
+        [hud hideAnimated:YES afterDelay:2.0];
     });
 
 }
@@ -195,7 +195,7 @@
         
         // 3.0秒之后再消失
         [self db_startAnimationWithView:hud];
-        [hud hideAnimated:YES afterDelay:3.0];
+        [hud hideAnimated:YES afterDelay:2.0];
     });
 }
 
@@ -227,7 +227,7 @@
         hud.detailsLabel.font = [UIFont systemFontOfSize:16]; //Johnkui - added
         hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
         // 3秒之后再消失
-        [hud hideAnimated:YES afterDelay:3.0];
+        [hud hideAnimated:YES afterDelay:2.0];
     });
 }
 

@@ -24,12 +24,11 @@
 //    BlurView.alpha = 0.5;
 //    [self.view addSubview:BlurView];
 //    [self.view sendSubviewToBack:BlurView];
-//
-//    
-//    
+
+    
 //    self.view.backgroundColor = [UIColor whiteColor];
     
-    [DBProgressHUD db_showLoading:@"  加载中...   " toView:self.view];
+//    [DBProgressHUD db_showLoading:@"  加载中...   " toView:self.view];
     
 //    [DBProgressHUD db_showError:@"服务暂不可用，请稍后重试"];
     
@@ -49,9 +48,12 @@
 //    [DBProgressHUD db_showTips:@"大白科技-DBProgressHUD"];
     
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [DBProgressHUD db_hideHUDAnimated:NO];
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [DBProgressHUD db_hideHUDAnimated:NO];
+//    });
+    
+    
+    [DBProgressHUD db_showTips:@"服务暂不可用，请稍后重试"];
 
 }
 

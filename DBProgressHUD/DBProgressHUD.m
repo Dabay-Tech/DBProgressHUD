@@ -46,11 +46,15 @@
         hud.removeFromSuperViewOnHide = YES;
         hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
         
-        // 1.5秒之后再消失
-
-        [hud hideAnimated:YES afterDelay:1.5];
+        // 根据信息的长度计算显示的时间，之后再消失
+        if([self calculateShowingTimeWithString:tips] == 0.0){
+        
+            [hud hideAnimated:NO];
+        }else{
+        
+            [hud hideAnimated:YES afterDelay:[self calculateShowingTimeWithString:tips]];
+        }
     });
-
 }
 
 
@@ -193,9 +197,17 @@
 //        hud.bezelView.color= [UIColor whiteColor];
         hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
         
-        // 1.5秒之后再消失
+
         [self db_startAnimationWithView:hud];
-        [hud hideAnimated:YES afterDelay:1.5];
+        
+        // 根据信息的长度计算显示的时间，之后再消失
+        if([self calculateShowingTimeWithString:text] == 0.0){
+            
+            [hud hideAnimated:NO];
+        }else{
+            
+            [hud hideAnimated:YES afterDelay:[self calculateShowingTimeWithString:text]];
+        }
     });
 }
 
@@ -226,8 +238,15 @@
         hud.removeFromSuperViewOnHide = YES;
         hud.detailsLabel.font = [UIFont systemFontOfSize:15]; //Johnkui - added
         hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
-        // 3秒之后再消失
-        [hud hideAnimated:YES afterDelay:1.5];
+        
+        // 根据信息的长度计算显示的时间，之后再消失
+        if([self calculateShowingTimeWithString:success] == 0.0){
+            
+            [hud hideAnimated:NO];
+        }else{
+            
+            [hud hideAnimated:YES afterDelay:[self calculateShowingTimeWithString:success]];
+        }
     });
 }
 
@@ -258,8 +277,15 @@
         hud.removeFromSuperViewOnHide = YES;
         hud.detailsLabel.font = [UIFont systemFontOfSize:15]; //Johnkui - added
         hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
-        // 2秒之后再消失
-        [hud hideAnimated:YES afterDelay:1.5];
+        
+        // 根据信息的长度计算显示的时间，之后再消失
+        if([self calculateShowingTimeWithString:error] == 0.0){
+            
+            [hud hideAnimated:NO];
+        }else{
+            
+            [hud hideAnimated:YES afterDelay:[self calculateShowingTimeWithString:error]];
+        }
     });
 }
 
@@ -426,5 +452,24 @@
 
 }
 
+
+/**
+ 计算HUD显示的时间
+
+ @param tipsString tips中的内容
+ @return HUD显示的时间
+ */
++(CGFloat)calculateShowingTimeWithString:(NSString *)tipsString{
+    
+    CGFloat time = 1.0 * (tipsString.length / 5.2);
+    
+    if(time < 1.5){
+        NSLog(@"1.5");
+        return 1.5;
+    }else{
+        NSLog(@"%.2f",time);
+        return time;
+    }
+}
 
 @end

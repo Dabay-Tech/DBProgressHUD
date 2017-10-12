@@ -1161,7 +1161,7 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
         if (kCFCoreFoundationVersionNumber >= kCFCoreFoundationVersionNumber_iOS_8_0) {
             UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
             UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
-            [self addSubview:effectView];
+//            [self addSubview:effectView];
             effectView.frame = self.bounds;
             effectView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
             self.backgroundColor = self.color;

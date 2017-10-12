@@ -30,6 +30,8 @@
         
         if (blockView == nil) blockView = [[UIApplication sharedApplication].windows lastObject];
         
+        NSLog(@"windows--%@",[UIApplication sharedApplication].windows);
+        
         // 快速显示一个提示信息
         DBProgressHUD *hud = [DBProgressHUD showHUDAddedTo:blockView animated:YES];
         hud.detailsLabel.text = tips;

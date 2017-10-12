@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor brownColor];
+    
 //    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
 //    UIVisualEffectView *BlurView = [[UIVisualEffectView alloc] initWithEffect:blur];
 //    BlurView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
@@ -45,7 +47,7 @@
 //    [DBProgressHUD db_showSuccess:@"大白科技-DBProgressHUD" toView:nil];
     
     
-//    [DBProgressHUD db_showTips:@"大白科技-DBProgressHUD"];
+    [DBProgressHUD db_showTips:@"大白科技-DBProgressHUD"];
     
     
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -53,7 +55,7 @@
 //    });
     
     
-    [DBProgressHUD db_showTips:@"服务暂不可用，请稍后重试"];
+//    [DBProgressHUD db_showTips:@"服务暂不可用，请稍后重试"];
 
 }
 

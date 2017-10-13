@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor brownColor];
+//    self.view.backgroundColor = [UIColor redColor];
     
 //    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
 //    UIVisualEffectView *BlurView = [[UIVisualEffectView alloc] initWithEffect:blur];
@@ -40,7 +40,7 @@
     
 //    [DBProgressHUD db_showLoading:@"  加载中...   " toView:nil];
     
-//    [DBProgressHUD db_showMessage:@"Dabay-Tech"];
+    [DBProgressHUD db_showMessage:@"Dabay-Tech"];
     
 //    [DBProgressHUD db_showMultiLineMessage:@"服务暂不可用，请稍后\n重试。服务暂不可用，请稍后重试" toView:nil];
     
@@ -56,6 +56,8 @@
     
     
 //    [DBProgressHUD db_showTips:@"服务暂不可用，请稍后重试"];
+    
+    [DBProgressHUD db_showLoading:@"   加载中......"];
 
 }
 

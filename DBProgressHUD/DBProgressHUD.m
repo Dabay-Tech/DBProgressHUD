@@ -24,13 +24,19 @@
  @param tips 提示的内容
  */
 +(void)db_showTips:(NSString *)tips{
-
+    
     __block UIView * blockView = nil;
     dispatch_async(dispatch_get_main_queue(), ^{
         
         if (blockView == nil) blockView = [[UIApplication sharedApplication].windows lastObject];
+        NSLog(@"%@",[[UIApplication sharedApplication].windows lastObject]);
         
-        NSLog(@"windows--%@",[UIApplication sharedApplication].windows);
+        //适配iOS11，iOS新增_UIInteractiveHighlightEffectWindow，要加载的在上面的是UITextEffectsWindow
+        for (NSObject * window in [UIApplication sharedApplication].windows) {
+            if([NSStringFromClass([window class]) isEqualToString:@"UITextEffectsWindow"]){
+                blockView = (UIView *)window;
+            }
+        }
         
         // 快速显示一个提示信息
         DBProgressHUD *hud = [DBProgressHUD showHUDAddedTo:blockView animated:YES];
@@ -46,14 +52,15 @@
         
         // 隐藏时候从父控件中移除
         hud.removeFromSuperViewOnHide = YES;
-        hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
+        hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.6];
+        
         
         // 根据信息的长度计算显示的时间，之后再消失
         if([self calculateShowingTimeWithString:tips] == 0.0){
-        
+            
             [hud hideAnimated:NO];
         }else{
-        
+            
             [hud hideAnimated:YES afterDelay:[self calculateShowingTimeWithString:tips]];
         }
     });
@@ -72,10 +79,17 @@
     
     
     __block UIView * blockView = view;
-
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         
         if (blockView == nil) blockView = [[UIApplication sharedApplication].windows lastObject];
+        
+        //适配iOS11，iOS新增_UIInteractiveHighlightEffectWindow，要加载的在上面的是UITextEffectsWindow
+        for (NSObject * window in [UIApplication sharedApplication].windows) {
+            if([NSStringFromClass([window class]) isEqualToString:@"UITextEffectsWindow"]){
+                blockView = (UIView *)window;
+            }
+        }
         
         // 快速显示一个提示信息
         DBProgressHUD *hud = [DBProgressHUD showHUDAddedTo:blockView animated:YES];
@@ -83,7 +97,7 @@
         hud.label.font = [UIFont systemFontOfSize:15];
         //这里不要只是这是detailsLabel的textColor，因为MBProgressHUD内部会设置label/detailsLabel的颜色为contentColor
         hud.contentColor = [UIColor whiteColor];
-
+        
         // 设置图片,添加动态加载logo
         DBLoadingImageView * loadImageView = [DBLoadingImageView loadImageView];
         hud.customView = loadImageView;
@@ -95,7 +109,8 @@
         
         // 隐藏时候从父控件中移除
         hud.removeFromSuperViewOnHide = YES;
-        hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
+        hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.6];
+        
     });
 }
 
@@ -106,9 +121,9 @@
  @param message 加载时的提示信息
  */
 + (void)db_showLoading:(NSString *)message{
-
+    
     [self db_showLoading:message toView:nil];
-
+    
 }
 
 
@@ -132,13 +147,22 @@
         if (!blockView) {
             blockView = [[UIApplication sharedApplication].windows lastObject];
         }
+        
+        //适配iOS11，iOS新增_UIInteractiveHighlightEffectWindow，要加载的在上面的是UITextEffectsWindow
+        for (NSObject * window in [UIApplication sharedApplication].windows) {
+            if([NSStringFromClass([window class]) isEqualToString:@"UITextEffectsWindow"]){
+                blockView = (UIView *)window;
+            }
+        }
+        
         // 快速显示一个提示信息
         DBProgressHUD *hud = [DBProgressHUD showHUDAddedTo:blockView animated:YES];
         hud.label.text = message;
         hud.contentColor = [UIColor whiteColor];
         // 隐藏时候从父控件中移除
         hud.removeFromSuperViewOnHide = YES;
-        hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
+        hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.6];
+        
         
         [self db_startAnimationWithView:hud];
     });
@@ -182,6 +206,13 @@
         
         if (blockView == nil) blockView = [[UIApplication sharedApplication].windows lastObject];
         
+        //适配iOS11，iOS新增_UIInteractiveHighlightEffectWindow，要加载的在上面的是UITextEffectsWindow
+        for (NSObject * window in [UIApplication sharedApplication].windows) {
+            if([NSStringFromClass([window class]) isEqualToString:@"UITextEffectsWindow"]){
+                blockView = (UIView *)window;
+            }
+        }
+        
         // 快速显示一个提示信息
         DBProgressHUD *hud = [DBProgressHUD showHUDAddedTo:blockView animated:YES];
         hud.detailsLabel.text = text;
@@ -196,10 +227,11 @@
         
         // 隐藏时候从父控件中移除
         hud.removeFromSuperViewOnHide = YES;
-//        hud.bezelView.color= [UIColor whiteColor];
-        hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
+        //        hud.bezelView.color= [UIColor whiteColor];
+        hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.6];
         
-
+        
+        
         [self db_startAnimationWithView:hud];
         
         // 根据信息的长度计算显示的时间，之后再消失
@@ -228,6 +260,14 @@
     __block UIView * blockView = view;
     dispatch_async(dispatch_get_main_queue(), ^{
         if (blockView == nil) blockView = [[UIApplication sharedApplication].windows lastObject];
+        
+        //适配iOS11，iOS新增_UIInteractiveHighlightEffectWindow，要加载的在上面的是UITextEffectsWindow
+        for (NSObject * window in [UIApplication sharedApplication].windows) {
+            if([NSStringFromClass([window class]) isEqualToString:@"UITextEffectsWindow"]){
+                blockView = (UIView *)window;
+            }
+        }
+        
         // 快速显示一个提示信息
         DBProgressHUD *hud = [DBProgressHUD showHUDAddedTo:blockView animated:YES];
         hud.detailsLabel.text = success;
@@ -239,7 +279,8 @@
         // 隐藏时候从父控件中移除
         hud.removeFromSuperViewOnHide = YES;
         hud.detailsLabel.font = [UIFont systemFontOfSize:15]; //Johnkui - added
-        hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
+        hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.6];
+        
         
         // 根据信息的长度计算显示的时间，之后再消失
         if([self calculateShowingTimeWithString:success] == 0.0){
@@ -267,6 +308,14 @@
     
     dispatch_async(dispatch_get_main_queue(), ^{
         if (blockView == nil) blockView = [[UIApplication sharedApplication].windows lastObject];
+        
+        //适配iOS11，iOS新增_UIInteractiveHighlightEffectWindow，要加载的在上面的是UITextEffectsWindow
+        for (NSObject * window in [UIApplication sharedApplication].windows) {
+            if([NSStringFromClass([window class]) isEqualToString:@"UITextEffectsWindow"]){
+                blockView = (UIView *)window;
+            }
+        }
+        
         // 快速显示一个提示信息
         DBProgressHUD *hud = [DBProgressHUD showHUDAddedTo:blockView animated:YES];
         hud.detailsLabel.text = error;
@@ -278,7 +327,8 @@
         // 隐藏时候从父控件中移除
         hud.removeFromSuperViewOnHide = YES;
         hud.detailsLabel.font = [UIFont systemFontOfSize:15]; //Johnkui - added
-        hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
+        hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.6];
+        
         
         // 根据信息的长度计算显示的时间，之后再消失
         if([self calculateShowingTimeWithString:error] == 0.0){
@@ -304,14 +354,24 @@
     
     dispatch_async(dispatch_get_main_queue(), ^{
         if (blockView == nil) blockView = [[UIApplication sharedApplication].windows lastObject];
+        
+        //适配iOS11，iOS新增_UIInteractiveHighlightEffectWindow，要加载的在上面的是UITextEffectsWindow
+        for (NSObject * window in [UIApplication sharedApplication].windows) {
+            if([NSStringFromClass([window class]) isEqualToString:@"UITextEffectsWindow"]){
+                blockView = (UIView *)window;
+            }
+        }
+        
         // 快速显示一个提示信息
         DBProgressHUD *hud = [DBProgressHUD showHUDAddedTo:blockView animated:YES];
         hud.detailsLabel.text = message;
         hud.contentColor = [UIColor whiteColor];
         //HUD的背景颜色
-        hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.645362367021276];
+        hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.6];
         // YES代表需要蒙版效果
         hud.detailsLabel.font = [UIFont systemFontOfSize:15]; //Johnkui - added
+        
+        
     });
 }
 
@@ -389,6 +449,13 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         UIView * blockView =nil;
         if (blockView == nil) blockView = [[UIApplication sharedApplication].windows lastObject];
+        
+        //适配iOS11，iOS新增_UIInteractiveHighlightEffectWindow，要加载的在上面的是UITextEffectsWindow
+        for (NSObject * window in [UIApplication sharedApplication].windows) {
+            if([NSStringFromClass([window class]) isEqualToString:@"UITextEffectsWindow"]){
+                blockView = (UIView *)window;
+            }
+        }
         [self hideHUDForView:blockView animated:YES];
     });
 }
@@ -405,6 +472,14 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         UIView * hudView =view;
         if (hudView == nil) hudView = [[UIApplication sharedApplication].windows lastObject];
+        
+        //适配iOS11，iOS新增_UIInteractiveHighlightEffectWindow，要加载的在上面的是UITextEffectsWindow
+        for (NSObject * window in [UIApplication sharedApplication].windows) {
+            if([NSStringFromClass([window class]) isEqualToString:@"UITextEffectsWindow"]){
+                hudView = (UIView *)window;
+            }
+        }
+        
         [self hideHUDForView:hudView animated:YES];
     });
 }
@@ -427,6 +502,14 @@
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         UIView * hudView = [[UIApplication sharedApplication].windows lastObject];
+        
+        //适配iOS11，iOS新增_UIInteractiveHighlightEffectWindow，要加载的在上面的是UITextEffectsWindow
+        for (NSObject * window in [UIApplication sharedApplication].windows) {
+            if([NSStringFromClass([window class]) isEqualToString:@"UITextEffectsWindow"]){
+                hudView = (UIView *)window;
+            }
+        }
+        
         [self hideHUDForView:hudView animated:animated];
     });
 }
@@ -434,7 +517,7 @@
 
 /** start animation */
 +(void)db_startAnimationWithView:(UIView *)view{
-
+    
     CGRect viewFrame = view.frame;
     viewFrame.origin.y -= 500;
     view.frame = viewFrame;
@@ -451,19 +534,19 @@
     
     //commitAnimations,将beginAnimation之后的所有动画提交并生成动画
     [UIView commitAnimations];
-
+    
 }
 
 
 /**
  计算HUD显示的时间
-
+ 
  @param tipsString tips中的内容
  @return HUD显示的时间
  */
 +(CGFloat)calculateShowingTimeWithString:(NSString *)tipsString{
     
-    CGFloat time = 1.0 * (tipsString.length / 5.2);
+    CGFloat time = 1.0 * (tipsString.length / 5.4);
     
     if(time < 1.5){
         NSLog(@"1.5");
@@ -475,3 +558,4 @@
 }
 
 @end
+

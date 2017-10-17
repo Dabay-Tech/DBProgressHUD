@@ -12,8 +12,6 @@
 
 
 
-
-
 @implementation DBProgressHUD
 
 
@@ -111,6 +109,8 @@
         hud.removeFromSuperViewOnHide = YES;
         hud.bezelView.color= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.6];
         
+        //增加加载提示HUD最长显示时间为20.0s，防止网速慢导致过长时间用户不能操作
+        [hud hideAnimated:YES afterDelay:30.0];
     });
 }
 
@@ -123,7 +123,6 @@
 + (void)db_showLoading:(NSString *)message{
     
     [self db_showLoading:message toView:nil];
-    
 }
 
 

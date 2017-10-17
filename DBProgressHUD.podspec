@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "DBProgressHUD"
-  s.version      = "1.2.1"
+  s.version      = "1.2.2"
   s.summary      = "Dabay tech : DBProgressHUD is based on MBProgressHUD."
   s.homepage     = "https://github.com/Dabay-Tech/DBProgressHUD"
   s.license      = "MIT"

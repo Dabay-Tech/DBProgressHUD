@@ -544,14 +544,11 @@
  @return HUD显示的时间
  */
 +(CGFloat)calculateShowingTimeWithString:(NSString *)tipsString{
-    
+
     CGFloat time = 1.0 * (tipsString.length / 5.4);
-    
     if(time < 1.5){
-        NSLog(@"1.5");
         return 1.5;
     }else{
-        NSLog(@"%.2f",time);
         return time;
     }
 }
